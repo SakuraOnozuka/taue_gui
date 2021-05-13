@@ -22,12 +22,8 @@ import Vue from 'vue'
 export default Vue.extend({
   name: 'HelloWorld',
   computed: {
-    message:function(){
-      if(this.$store.state.message === 'message'){
-        return '起動中'
-      }else{
-        return '起動中'
-      }
+    message(){
+      return this.$store.state.message
     },
     layer() {
       return this.$store.state.layer

@@ -7,7 +7,7 @@
       </v-col>
       <v-col cols="1"></v-col>
       <v-col cols="3">
-        <list :config_mode_x="x()" :config_mode_y="y()"></list>
+        <list :config_mode_x="x" :config_mode_y="y"></list>
       </v-col>
     </v-row>
     <v-row class="mt-6">

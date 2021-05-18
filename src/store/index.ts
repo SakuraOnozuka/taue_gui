@@ -10,21 +10,21 @@ export default new Vuex.Store({
     window2:'https://placehold.jp/150x150.png',
     layer:'layer',
     now_layer_model:'上段',
-    config_mode_x:-85,
-    config_mode_y:491,
+    configModeX:-85,
+    configModeY:491,
   },
   mutations: {
-    click_top(state){
-      state.config_mode_y++
+    clickTop(state){
+      state.configModeY++
     },
-    click_left(state){
-      state.config_mode_x--
+    clickLeft(state){
+      state.configModeX--
     },
-    click_right(state){
-      state.config_mode_x++
+    clickRight(state){
+      state.configModeX++
     },
-    click_bottom(state){
-      state.config_mode_y--
+    clickBottom(state){
+      state.configModeY--
     },
   },
   actions: {

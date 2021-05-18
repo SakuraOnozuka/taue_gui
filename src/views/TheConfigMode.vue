@@ -3,7 +3,12 @@
     <v-row class="mt-3">
       <v-col cols="1" />
       <v-col cols="4">
-        <the-adjust-buttons />
+        <the-adjust-buttons
+            @click-right="click_right"
+            @click-left="click_left"
+            @click-top="click_top"
+            @click-bottom="click_bottom"
+         />
       </v-col>
       <v-col cols="1" />
       <v-col cols="3">

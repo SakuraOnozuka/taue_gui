@@ -52,10 +52,10 @@ export default Vue.extend({
   },
   computed: {
     x() {
-      return this.$store.state.config_mode_x
+      return this.$store.state.configModeX
     },
     y() {
-      return this.$store.state.config_mode_y
+      return this.$store.state.configModeY
     },
   }
 })

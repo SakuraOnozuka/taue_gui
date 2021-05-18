@@ -15,7 +15,7 @@ export default new Vuex.Store({
   },
   mutations: {
     click_top(state){
-      state.config_mode_y ++
+      state.config_mode_y++
     },
     click_left(state){
       state.config_mode_x--

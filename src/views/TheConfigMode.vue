@@ -15,8 +15,11 @@
       </v-col>
     </v-row>
     <v-row class="mt-6">
-      <v-btn style="margin: 0 auto;">
-        <router-link to="/">close</router-link>
+      <v-btn
+          style="margin: 0 auto;"
+          @click="toMainView"
+      >
+        close
       </v-btn>
     </v-row>
   </v-container>
@@ -42,6 +45,9 @@ export default Vue.extend({
     },
     click_bottom() {
       this.$store.commit("click_bottom")
+    },
+    toMainView() {
+      this.$router.push('/')
     }
   },
   computed: {
@@ -56,7 +62,4 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-.center{
-  text-align: center;
-}
 </style>

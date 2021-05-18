@@ -4,7 +4,10 @@
       <h3>{{this.message}}</h3>
     </div>
     <div class="center mt-3">
-      <img class="mr-3" src="https://placehold.jp/150x150.png">
+      <img
+          class="mr-3"
+          src="https://placehold.jp/150x150.png"
+      >
       <img src="https://placehold.jp/150x150.png">
     </div>
     <div>
@@ -14,8 +17,9 @@
       <v-btn
           class="mr-3"
           style="float: right"
+          @click="toConfigMode"
       >
-        <router-link to="/config_mode">config mode</router-link>
+        config mode
       </v-btn>
     </div>
   </div>
@@ -33,7 +37,12 @@ export default Vue.extend({
     layer() {
       return this.$store.state.layer
     },
+    },
+  methods: {
+    toConfigMode() {
+      this.$router.push('/config_mode')
     }
+  }
   })
 </script>
 

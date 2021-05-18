@@ -5,12 +5,8 @@
       <br>
       <v-list>
         <v-list-item>
-          <v-list-item-content
-              class="col-6"
-          >x:</v-list-item-content>
-          <v-list-item-content
-              class="align-end col-6"
-          >
+          <v-list-item-content class="col-6">x:</v-list-item-content>
+          <v-list-item-content class="align-end col-6">
             {{ config_mode_x }}
           </v-list-item-content>
         </v-list-item>
@@ -44,6 +40,7 @@ export default Vue.extend({
     }
 })
 </script>
+
 <style scoped>
 .center{
   text-align: center;

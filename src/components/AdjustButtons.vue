@@ -44,6 +44,7 @@ export default Vue.extend({
   }
 })
 </script>
+
 <style scoped>
 .center{
   text-align: center;

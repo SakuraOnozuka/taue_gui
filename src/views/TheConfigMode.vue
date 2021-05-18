@@ -9,7 +9,8 @@
       <v-col cols="3">
         <the-list
             :config_mode_x="x"
-            :config_mode_y="y">
+            :config_mode_y="y"
+        >
         </the-list>
       </v-col>
     </v-row>
@@ -53,7 +54,8 @@ export default Vue.extend({
   }
 })
 </script>
-<style>
+
+<style scoped>
 .center{
   text-align: center;
 }

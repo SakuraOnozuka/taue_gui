@@ -13,7 +13,8 @@
       </div>
       <v-btn
           class="mr-3"
-          style="float: right">
+          style="float: right"
+      >
         <router-link to="/config_mode">config mode</router-link>
       </v-btn>
     </div>
@@ -35,6 +36,7 @@ export default Vue.extend({
     }
   })
 </script>
+
 <style scoped>
 .center{
   text-align: center;

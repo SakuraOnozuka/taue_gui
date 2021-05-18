@@ -7,13 +7,13 @@
         <v-list-item>
           <v-list-item-content class="col-6">x:</v-list-item-content>
           <v-list-item-content class="align-end col-6">
-            {{ config_mode_x }}
+            {{ configModeX }}
           </v-list-item-content>
         </v-list-item>
         <v-list-item>
           <v-list-item-content class="col-6">y:</v-list-item-content>
           <v-list-item-content class="align-end col-6">
-            {{ config_mode_y }}
+            {{ configModeY }}
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -29,11 +29,11 @@ import Vue from 'vue'
 export default Vue.extend({
   name: 'TheList',
   props: {
-    config_mode_x: {
+    configModeX: {
       type: Number,
       required: true
     },
-    config_mode_y: {
+    configModeY: {
       type: Number,
       required: true
     },

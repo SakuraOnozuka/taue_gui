@@ -8,8 +8,8 @@
       <v-col cols="1" />
       <v-col cols="3">
         <the-list
-            :config_mode_x="x"
-            :config_mode_y="y"
+            :configModeX="x"
+            :configModeY="y"
         >
         </the-list>
       </v-col>

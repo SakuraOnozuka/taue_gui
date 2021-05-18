@@ -35,16 +35,16 @@ export default Vue.extend({
   components: {TheList, TheAdjustButtons},
   methods: {
     click_top() {
-      this.$store.commit("click_top")
+      this.$store.commit("clickTop")
     },
     click_left() {
-      this.$store.commit("click_left")
+      this.$store.commit("clickLeft")
     },
     click_right() {
-      this.$store.commit("click_right")
+      this.$store.commit("clickRight")
     },
     click_bottom() {
-      this.$store.commit("click_bottom")
+      this.$store.commit("clickBottom")
     },
     toMainView() {
       this.$router.push('/')

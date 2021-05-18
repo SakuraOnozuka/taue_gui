@@ -37,13 +37,13 @@ export default Vue.extend({
     layer() {
       return this.$store.state.layer
     },
-    },
+  },
   methods: {
     toConfigMode() {
       this.$router.push('/config_mode')
     }
   }
-  })
+})
 </script>
 
 <style scoped>

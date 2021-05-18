@@ -27,7 +27,7 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'AdjustButtons',
+  name: 'TheAdjustButtons',
   methods: {
     click_top() {
       this.$emit("click_top")

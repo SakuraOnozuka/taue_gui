@@ -3,7 +3,7 @@
     <v-row class="mt-3">
       <v-col cols="1"></v-col>
       <v-col cols="4">
-        <adjust-buttons />
+        <the-adjust-buttons />
       </v-col>
       <v-col cols="1" />
       <v-col cols="3">
@@ -24,12 +24,12 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import AdjustButtons from "@/components/AdjustButtons.vue";
+import TheAdjustButtons from "@/components/TheAdjustButtons.vue";
 import TheList from "@/components/TheList.vue"
 
 export default Vue.extend({
   name: 'TheConfigMode',
-  components: {TheList, AdjustButtons},
+  components: {TheList, TheAdjustButtons},
   methods: {
     click_top() {
       this.$store.commit("click_top")

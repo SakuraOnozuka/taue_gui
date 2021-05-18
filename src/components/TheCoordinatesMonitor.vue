@@ -26,8 +26,9 @@
 
 <script lang="ts">
 import Vue from 'vue'
+
 export default Vue.extend({
-  name: 'TheList',
+  name: 'TheCoordinatesMonitor',
   props: {
     configModeX: {
       type: Number,
@@ -37,7 +38,7 @@ export default Vue.extend({
       type: Number,
       required: true
     },
-    }
+  }
 })
 </script>
 

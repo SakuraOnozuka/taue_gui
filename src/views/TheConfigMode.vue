@@ -1,26 +1,34 @@
 <template>
   <v-container>
     <v-row class="mt-3">
-      <v-col cols="1" />
-      <v-col cols="4">
-        <the-adjust-buttons />
+      <v-col cols="6">
+        <div class="adjust-buttons-wrapper">
+          <the-adjust-buttons
+            @click-right="clickRight"
+            @click-left="clickLeft"
+            @click-top="clickTop"
+            @click-bottom="clickBottom"
+         />
+        </div>
       </v-col>
-      <v-col cols="1" />
-      <v-col cols="3">
-        <the-list
-            :configModeX="x"
-            :configModeY="y"
-        >
-        </the-list>
+      <v-col cols="6">
+        <div class="list-wrapper">
+          <the-coordinates-monitor
+              :config-mode-x="configModeX"
+              :config-mode-y="configModeY"
+          />
+        </div>
       </v-col>
     </v-row>
     <v-row class="mt-6">
-      <v-btn
-          style="margin: 0 auto;"
-          @click="toMainView"
-      >
-        close
-      </v-btn>
+      <div class="footer-row">
+        <v-btn
+            class="btn-close"
+            @click="toMainView"
+        >
+          close
+        </v-btn>
+      </div>
     </v-row>
   </v-container>
 </template>
@@ -28,22 +36,25 @@
 <script lang="ts">
 import Vue from 'vue'
 import TheAdjustButtons from "@/components/TheAdjustButtons.vue";
-import TheList from "@/components/TheList.vue"
+import TheCoordinatesMonitor from "@/components/TheCoordinatesMonitor.vue"
 
 export default Vue.extend({
   name: 'TheConfigMode',
-  components: {TheList, TheAdjustButtons},
+  components: {
+    TheCoordinatesMonitor,
+    TheAdjustButtons
+  },
   methods: {
-    click_top() {
+    clickTop() {
       this.$store.commit("clickTop")
     },
-    click_left() {
+    clickLeft() {
       this.$store.commit("clickLeft")
     },
-    click_right() {
+    clickRight() {
       this.$store.commit("clickRight")
     },
-    click_bottom() {
+    clickBottom() {
       this.$store.commit("clickBottom")
     },
     toMainView() {
@@ -51,15 +62,28 @@ export default Vue.extend({
     }
   },
   computed: {
-    x() {
-      return this.$store.state.config_mode_x
+    configModeX() {
+      return this.$store.state.configModeX
     },
-    y() {
-      return this.$store.state.config_mode_y
+    configModeY() {
+      return this.$store.state.configModeY
     },
   }
 })
 </script>
 
 <style scoped>
+.adjust-buttons-wrapper {
+  width: 250px;
+  margin-left: 20%;
+}
+
+.list-wrapper {
+  width: 250px;
+  margin-right: 20%;
+}
+
+.footer-row {
+  padding-left: 30px;
+}
 </style>

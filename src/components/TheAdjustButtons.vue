@@ -30,16 +30,16 @@ export default Vue.extend({
   name: 'TheAdjustButtons',
   methods: {
     clickTop() {
-      this.$emit("clickTop")
+      this.$emit("click-top")
     },
     clickLeft() {
-      this.$emit("clickLeft")
+      this.$emit("click-left")
     },
     clickRight() {
-      this.$emit("clickRight")
+      this.$emit("click-right")
     },
     clickBottom() {
-      this.$emit("clickBottom")
+      this.$emit("click-bottom")
     },
   }
 })

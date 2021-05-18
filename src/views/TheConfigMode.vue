@@ -3,9 +3,9 @@
     <v-row class="mt-3">
       <v-col cols="1"></v-col>
       <v-col cols="4">
-        <the-adjust-buttons />
+        <the-adjust-buttons></the-adjust-buttons>
       </v-col>
-      <v-col cols="1" />
+      <v-col cols="1"></v-col>
       <v-col cols="3">
         <the-list
             :config_mode_x="x"

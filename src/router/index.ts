@@ -1,20 +1,20 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
-import MainView from "@/views/MainView.vue";
-import ConfigMode from "@/views/ConfigMode.vue";
+import TheMainView from "@/views/TheMainView.vue";
+import TheConfigMode from "@/views/TheConfigMode.vue";
 
 Vue.use(VueRouter)
 
 const routes: Array<RouteConfig> = [
   {
     path: '/',
-    name: 'MainView',
-    component: MainView
+    name: 'TheMainView',
+    component: TheMainView
   },
   {
     path: '/config_mode',
-    name: 'ConfigMode',
-    component: ConfigMode
+    name: 'TheConfigMode',
+    component: TheConfigMode
   }
 ]
 

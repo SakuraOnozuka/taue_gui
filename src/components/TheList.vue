@@ -30,21 +30,18 @@
 
 <script lang="ts">
 import Vue from 'vue'
-
 export default Vue.extend({
-  name: 'List',
-  props: function() {
-    return {
-      config_mode_x: {
-        type: Number,
-        required: true
-      },
-      config_mode_y: {
-        type: Number,
-        required: true
-      },
-    };
-  },
+  name: 'TheList',
+  props: {
+    config_mode_x: {
+      type: Number,
+      required: true
+    },
+    config_mode_y: {
+      type: Number,
+      required: true
+    },
+    }
 })
 </script>
 <style scoped>
@@ -52,3 +49,16 @@ export default Vue.extend({
   text-align: center;
 }
 </style>
+
+
+Jot something down
+
+
+
+
+
+
+
+
+
+

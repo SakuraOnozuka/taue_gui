@@ -11,7 +11,11 @@
       <div class="center mt-3">
         <h4>{{this.layer}}</h4>
       </div>
-      <v-btn class="mr-3" style="float: right"><router-link to="/config_mode">config mode</router-link></v-btn>
+      <v-btn
+          class="mr-3"
+          style="float: right">
+        <router-link to="/config_mode">config mode</router-link>
+      </v-btn>
     </div>
   </div>
 </template>
@@ -20,7 +24,7 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'HelloWorld',
+  name: 'MainView',
   computed: {
     message(){
       return this.$store.state.message

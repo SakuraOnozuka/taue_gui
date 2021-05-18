@@ -3,15 +3,20 @@
     <v-row class="mt-3">
       <v-col cols="1"></v-col>
       <v-col cols="4">
-        <adjust-buttons></adjust-buttons>
+        <adjust-buttons />
       </v-col>
-      <v-col cols="1"></v-col>
+      <v-col cols="1" />
       <v-col cols="3">
-        <list :config_mode_x="x" :config_mode_y="y"></list>
+        <the-list
+            :config_mode_x="x"
+            :config_mode_y="y">
+        </the-list>
       </v-col>
     </v-row>
     <v-row class="mt-6">
-      <v-btn style="margin: 0 auto;"><router-link to="/">close</router-link></v-btn>
+      <v-btn style="margin: 0 auto;">
+        <router-link to="/">close</router-link>
+      </v-btn>
     </v-row>
   </v-container>
 </template>
@@ -19,11 +24,11 @@
 <script lang="ts">
 import Vue from 'vue'
 import AdjustButtons from "@/components/AdjustButtons.vue";
-import List from "@/components/List.vue";
+import TheList from "@/components/TheList.vue"
 
 export default Vue.extend({
-  name: 'HelloWorld',
-  components: {List, AdjustButtons},
+  name: 'TheConfigMode',
+  components: {TheList, AdjustButtons},
   methods: {
     click_top() {
       this.$store.commit("click_top")

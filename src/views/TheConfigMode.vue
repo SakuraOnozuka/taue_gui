@@ -34,42 +34,41 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { Component, Prop, Vue } from 'vue-property-decorator'
 import TheAdjustButtons from "@/components/TheAdjustButtons.vue";
 import TheCoordinatesMonitor from "@/components/TheCoordinatesMonitor.vue"
 
-export default Vue.extend({
-  name: 'TheConfigMode',
+@Component({
   components: {
     TheCoordinatesMonitor,
     TheAdjustButtons
-  },
-  methods: {
-    clickTop() {
-      this.$store.commit("clickTop")
-    },
-    clickLeft() {
-      this.$store.commit("clickLeft")
-    },
-    clickRight() {
-      this.$store.commit("clickRight")
-    },
-    clickBottom() {
-      this.$store.commit("clickBottom")
-    },
-    toMainView() {
-      this.$router.push('/')
-    }
-  },
-  computed: {
-    configModeX() {
-      return this.$store.state.configModeX
-    },
-    configModeY() {
-      return this.$store.state.configModeY
-    },
   }
 })
+
+export default class TheConfigMode extends Vue {
+
+  get configModeX() {
+    return this.$store.state.configModeX
+  }
+  get configModeY() {
+    return this.$store.state.configModeY
+  }
+  clickTop() {
+    this.$store.commit("clickTop")
+  }
+  clickLeft() {
+    this.$store.commit("clickLeft")
+  }
+  clickRight() {
+    this.$store.commit("clickRight")
+  }
+  clickBottom() {
+    this.$store.commit("clickBottom")
+  }
+  toMainView() {
+    this.$router.push('/')
+  }
+}
 </script>
 
 <style scoped>

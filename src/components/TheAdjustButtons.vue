@@ -24,25 +24,26 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
 
-export default Vue.extend({
-  name: 'TheAdjustButtons',
-  methods: {
-    clickTop() {
-      this.$emit("click-top")
-    },
-    clickLeft() {
-      this.$emit("click-left")
-    },
-    clickRight() {
-      this.$emit("click-right")
-    },
-    clickBottom() {
-      this.$emit("click-bottom")
-    },
+import { Component, Emit, Vue } from 'vue-property-decorator'
+
+
+@Component({
+  components: {
   }
 })
+
+export default class TheAdjustButton extends Vue{
+  @Emit()
+    clickTop(){ return }
+  @Emit()
+    clickRight(){ return }
+  @Emit()
+    clickLeft(){ return }
+  @Emit()
+    clickBottom(){ return }
+}
+
 </script>
 
 <style scoped>

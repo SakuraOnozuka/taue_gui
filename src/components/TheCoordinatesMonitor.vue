@@ -25,21 +25,20 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { Component, Prop, Vue } from 'vue-property-decorator'
 
-export default Vue.extend({
-  name: 'TheCoordinatesMonitor',
-  props: {
-    configModeX: {
-      type: Number,
-      required: true
-    },
-    configModeY: {
-      type: Number,
-      required: true
-    },
+@Component({
+  components: {
   }
 })
+
+export default class TheCoordinatesMonitor extends Vue{
+  @Prop({ required:true })
+  configModeX!: number;
+  @Prop({ required:true })
+  configModeY!: number;
+}
+
 </script>
 
 <style scoped>

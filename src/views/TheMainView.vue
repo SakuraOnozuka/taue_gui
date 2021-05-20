@@ -26,24 +26,26 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { Component, Vue } from 'vue-property-decorator'
 
-export default Vue.extend({
-  name: 'MainView',
-  computed: {
-    message(){
-      return this.$store.state.message
-    },
-    layer() {
-      return this.$store.state.layer
-    },
-  },
-  methods: {
-    toConfigMode() {
-      this.$router.push('/config_mode')
-    }
+
+@Component({
+  components: {
   }
 })
+
+export default class MainView extends Vue{
+  get message():string{
+    return this.$store.state.message
+  }
+  get layer():string {
+    return this.$store.state.layer
+  }
+  toConfigMode() {
+    this.$router.push('/config_mode')
+  }
+}
+
 </script>
 
 <style scoped>

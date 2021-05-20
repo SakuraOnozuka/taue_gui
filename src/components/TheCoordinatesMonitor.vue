@@ -27,11 +27,7 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
 
-@Component({
-  components: {
-  }
-})
-
+@Component
 export default class TheCoordinatesMonitor extends Vue{
   @Prop({ required:true })
   configModeX!: number;

@@ -28,11 +28,7 @@
 import { Component, Emit, Vue } from 'vue-property-decorator'
 
 
-@Component({
-  components: {
-  }
-})
-
+@Component
 export default class TheAdjustButton extends Vue{
   @Emit()
     clickTop(){ return }

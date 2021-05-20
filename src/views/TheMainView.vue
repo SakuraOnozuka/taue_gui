@@ -35,13 +35,13 @@ import { Component, Vue } from 'vue-property-decorator'
 })
 
 export default class MainView extends Vue{
-  get message():string{
+  get message() :string {
     return this.$store.state.message
   }
-  get layer():string {
+  get layer() :string {
     return this.$store.state.layer
   }
-  toConfigMode() {
+  toConfigMode(): void {
     this.$router.push('/config_mode')
   }
 }

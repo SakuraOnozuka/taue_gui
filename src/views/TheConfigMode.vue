@@ -47,25 +47,25 @@ import TheCoordinatesMonitor from "@/components/TheCoordinatesMonitor.vue"
 
 export default class TheConfigMode extends Vue {
 
-  get configModeX() {
+  get configModeX() :number {
     return this.$store.state.configModeX
   }
-  get configModeY() {
+  get configModeY() :number {
     return this.$store.state.configModeY
   }
-  clickTop() {
+  clickTop(): void {
     this.$store.commit("clickTop")
   }
-  clickLeft() {
+  clickLeft(): void {
     this.$store.commit("clickLeft")
   }
-  clickRight() {
+  clickRight(): void {
     this.$store.commit("clickRight")
   }
-  clickBottom() {
+  clickBottom(): void {
     this.$store.commit("clickBottom")
   }
-  toMainView() {
+  toMainView(): void {
     this.$router.push('/')
   }
 }
